@@ -1,32 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="rus">
 <head>
-	<meta charset="utf-8">
-	<title>Корнилова</title>
-	<link rel="stylesheet" href="style.css"> 
+    <meta charset="UTF-8">
+    <meta name="author" content="Анна Корнилова">
+    <meta name="description" content="Загадки">
+    <title>Kornilova.IT</title>
+    <link rel="shortcut icon" href="icon.jpg" type="image/x-icon">
+    <link href="style.css?<?php echo date('YmdHis');?>" type="text/css" rel="stylesheet" />
+
 	<script type="text/javascript">
 
-		var answer = parseInt(Math.random() * 100);
+		var answer = parseInt(Math.random() * 100); /*генерация случайного числа*/
 		var tryCount = 0;
 		var maxTryCount = 5;
 
-		function readInt(){
+		function readInt(){ /* считывает число из текстового поля, пришла на замену промпт*/
 			var number = document.getElementById("userAnswer").value;
 			return parseInt(number);
 		}
 
-		function write(text){
+		function write(text){ /*заменяет текст, исп вместо алёрта*/
 			document.getElementById("info").innerHTML = text;
 		}
 
-		function hide(id){
+		function hide(id){ /*функция для скрытия элемента со страницы*/
 			document.getElementById(id).style.display = "none";
 		}
 
 		function guess(){
 			tryCount++;
 
-			var userAnswer = readInt();
+			var userAnswer = readInt(); /*присваиваем значение, кот пользователь ввел в поле*/
 			if(userAnswer == answer){
 				write("<b>Поздравляю, вы угадали!</b>");
 				hide("button");
@@ -47,16 +51,10 @@
 <body>
 
 <div class="content">
-	<div class="header">
-		<a href="index.html">Главная</a>
-		<span>/</span>
-
-		<a href="puzzle.html">Загадки</a>
-		<span>/</span>
-
-		<a href="guess.html">Угадайка</a>
-
-	</div>
+	
+<?php
+	include "menu.php";
+?>
 
 <div class="contentWrap">
     <div class="content">
@@ -66,15 +64,14 @@
 
 			<div class="box">
 				<h3>
-					<p id="info">Угадайте число от 0 до 100.
+					<p id="info">Угадайте число от 0 до 100.<br>
+					<i>У вас 5 попыток.</i><br>
+					Удачи!
+					</p>
 				</h3>
 
-				<h4>
-					<i>У вас 5 поппыток.</i><br>
-					Удачи!</p>
-				</h4>
-				
-				<input type="text" id="userAnswer"><br>
+		
+				<input type="text" id="userAnswer" placeholder="ваш ответ..."><br>
 
 				<a href="#" onClick="guess();" id="button">Проверить</a>				
 			</div>
@@ -82,14 +79,13 @@
         </div>
     </div>
 </div>
-
-	
-
 </div>
-<div class="footer">
-	Copyright &copy; Anna_Pavlovna.K
-<div>
+
+<?php 
+	include "footer.php"
+?>
 
 
 </body>
-</html>
+</html>    
+  
