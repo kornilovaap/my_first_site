@@ -4,14 +4,14 @@
 }
 
 body {
-    background-color: pink;
+    background-color: #ffb28b;
     font-family: 'Roboto', sans-serif;
 }
 
 .header {
     min-width: 1300px;
     border-bottom: 1px solid #b5b7ba;
-    background-color: #dfdfdf;
+    background-color: #fadaa7;
     margin: 0 auto;
     height: 50px;
     text-align: center;
@@ -115,7 +115,7 @@ body {
     background-color: #ffffff;
     width: 1238px;
     min-height: 500px;
-    margin: 50px auto 0 auto;
+    margin: 50px auto 50px auto;
     padding-top: 37px;
     padding-left: 38px;
     padding-bottom: 100px;
@@ -172,14 +172,17 @@ body {
     color: inherit;
 }
 
-.footer { /* # == id */
-    background-color: #434445;
+.footer { 
+    background-color: #f7c677;
     width: 100%;
     float: left;
     height: 140px;
     text-align: center;
+    padding-top: 10px;
+    text-decoration: none;
     color: #a4a4a4;
     font-size: 20px;
     font-weight: 100;
     line-height: 140px;
 }
+ 
