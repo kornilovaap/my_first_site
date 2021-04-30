@@ -5,7 +5,7 @@
     <meta name="author" content="Анна Корнилова">
     <title>Kornilova.IT</title>
     <link rel="shortcut icon" href="icon.jpg" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <link href="style.css?<?php echo date('YmdHis');?>" type="text/css" rel="stylesheet" />
 
 	<script type="text/javascript">
 
